@@ -22,42 +22,42 @@ class MenuMakanan extends Component {
   }
   nasipadang() {
     this.setState({
-      pesan: "Nasi Padang",
+      pesan: this.state.pesan + " Nasi Padang,",
       jumlah: this.state.jumlah + 1,
       tampil: true,
     });
   }
   sate() {
     this.setState({
-      pesan: "Sate",
+      pesan: this.state.pesan + " Sate,",
       jumlah: this.state.jumlah + 1,
       tampil: true,
     });
   }
   soto() {
     this.setState({
-      pesan: "Soto Ayam Lamongan",
+      pesan: this.state.pesan + " Soto Ayam Lamongan,",
       jumlah: this.state.jumlah + 1,
       tampil: true,
     });
   }
   uduk() {
     this.setState({
-      pesan: "Nasi Uduk",
+      pesan: this.state.pesan + " Nasi Uduk,",
       jumlah: this.state.jumlah + 1,
       tampil: true,
     });
   }
   kuning() {
     this.setState({
-      pesan: "Nasi Kuning",
+      pesan: this.state.pesan + " Nasi Kuning,",
       jumlah: this.state.jumlah + 1,
       tampil: true,
     });
   }
   batal() {
     this.setState({
-      pesan: " ",
+      pesan: [""],
       jumlah: 0,
       tampil: false,
     });
