@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ListMakanan from "../ListData/ListMakanan";
 
-class MenuMakanan extends Component() {
+class MenuMakanan extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class MenuMakanan extends Component() {
     this.batal = this.batal.bind(this);
   }
   pilihPesanan(value, e) {
-    this.setState({ [value]: e.target.value });
+    this.setState({ [value]: e.target.value, value: true });
   }
   nasipadang() {
     this.setState({
@@ -103,16 +103,21 @@ class MenuMakanan extends Component() {
           </tbody>
         </table>
         <br />
+        <br />
         <input
           type="text"
           placeholder="Masukkan Pesanan Anda"
           onChange={(e) => this.pilihPesanan("pesan", e)}
         />
+        <br />
+        <br />
         <input
           type="number"
-          placeholder="Masukkan Pesanan Anda"
+          placeholder="Masukkan Jumlah Pesanan Anda"
           onChange={(e) => this.pilihPesanan("jumlah", e)}
         />
+        <br />
+        <br />
         <button onClick={this.batal}>Batalkan Semua Pesanan</button>
         {this.state.tampil === true ? (
           <div>
